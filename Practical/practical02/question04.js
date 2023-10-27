@@ -1,3 +1,5 @@
+// Practical 2 - Question 4
+
 studInfo = [
     {
         id: 15,
@@ -120,7 +122,3 @@ function createGreetingsForStudent(studentID) {
 
     return greetingObject;
 }
-
-
-
-
