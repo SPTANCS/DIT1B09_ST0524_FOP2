@@ -46,7 +46,9 @@ console.log();
 console.log('sort the array to new array (name of array : fruits_sorted)');
 console.log('The fruit Array: ', fruits.toString());
 
-let fruits_sorted = fruits.sort();
+let fruits_sorted = [...fruits]; // clone the fruit array
+fruits_sorted.sort();
+
 console.log('The fruit Array: ', fruits.toString());
 console.log('The fruits_sorted Array: ', fruits_sorted.toString());
 
