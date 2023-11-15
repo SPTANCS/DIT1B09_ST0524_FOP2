@@ -3,7 +3,7 @@ const student = {
     name: 'John',
     "my age": 20,
     "my hobbies": ['reading', 'games', 'coding'],
-    "say Hi": function () {
+    "say Hi":  function () {
         return "I am " + this.name + " and my age is " + this["my age"];
     },
     "subject score": {
