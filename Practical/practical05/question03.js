@@ -3,9 +3,9 @@ var input = require('readline-sync');
 const myFirstPromise = new Promise((resolve, reject) => {
     var agreement = input.question("Do you agree with the statement? (Enter Y - Yes or N - No) ");
 
-    if (agreement == "y") {
+    if (agreement.toLowerCase() == "y") {
         resolve("Agree!");
-    } else if (agreement == "n") {
+    } else if (agreement.toLowerCase() == "n") {
         reject("Disagree!");
     } else {
         console.log("Incorrect Selection!");
