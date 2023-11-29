@@ -7,12 +7,17 @@
 	
 */
 // TODO: Q3a Code here
-let studentresult = new Map([
-    ["p2300001", "A"],
-    ["p2312033", "C-"],
-    ["p2318812", "B+"],
-    ["p2380923", "D"]
-]);
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map
+
+let testresult = {
+    "p2300001" : "A" ,
+    "p2312033" : "C-" ,
+    "p2318812" : "B+",
+    "p2380923" : "D" ,
+};
+
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries
+const studentresult = new Map(Object.entries(testresult));
 
 // Display the result of "p2380923"
 // TODO: Q3b Code here
