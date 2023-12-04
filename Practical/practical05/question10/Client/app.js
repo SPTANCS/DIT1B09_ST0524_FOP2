@@ -43,6 +43,26 @@ function getStationInfo(qStation)  {
 }
 
 /******************************************************************************/
+
+function displayMRTLine() {
+    let mrtLineArray = [];
+    console.log("MRT Line: ");
+    for (var i = 0; i < allStationData.length; i++) {
+        if (allStationData[i].STN_NAME.indexOf("LRT") == -1) {
+            let mrtLine = allStationData[i].STN_NO.substring(0, 2);
+            if (!mrtLineArray.includes(mrtLine)) {
+                mrtLineArray.push(mrtLine);
+            }
+        }
+    }
+    mrtLineArray.sort();
+    mrtLineArray.forEach((line) => {
+        console.log(line);
+    })
+    readline.question("\nPress any key to continue...");
+    console.clear();
+}
+
 function displayAllStation() {
     console.log("Station Name");
     for (var i = 0; i < station.length; i++) {
@@ -148,7 +168,8 @@ function userOption() {
         option = readline.questionInt(displayOption, {limitMessage :"Invalid, please enter an Integer"});
         if (option >= 1 && option <= 7) {
             if (option == 1) {
-                displayAllStation();
+                displayMRTLine();
+                //displayAllStation();
             }
             else if (option == 2) {
                 displaySortByStationNo();
