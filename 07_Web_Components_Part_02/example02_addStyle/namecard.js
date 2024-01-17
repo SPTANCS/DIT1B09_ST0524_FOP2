@@ -1,6 +1,23 @@
 const template = document.createElement('template');
 
 template.innerHTML = /*html*/`
+    <style>
+        :host {
+            display: block;
+            border-style: outset;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: lightgrey;
+        }
+        div {
+            padding: 0px 30px;
+        }
+        h3 {
+            font-size: 2rem;
+        }
+        h5 {
+            font-size: 1rem;
+        }
+    </style>
     <div>
         <h3 id='userName'>Name Goes Here</h3>
         <hr>
