@@ -4,12 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Name Card Example</title>
-    <script src="./namecard.js" type="module"></script>
+    <script src="./namecard.js" type="module" defer></script>
+    <script src="./main.js" defer></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", (event) => {
+            console.log("DOM Fully loaded and parsed");            
+            loadCards();
+        });
+    </script>
 </head>
 <body>
     <h1>Name Card</h1>
-    <name-card username="Tan Chee Seong" usercontact="68704675" useremail="tan_chee_seong@sp.edu.sg"></name-card>
-    <name-card username="Mary Lim" usercontact="123456789" useremail="mary@gmail.com"></name-card>
-    <name-card username="Peter Lee" usercontact="987654321" useremail="pete@yahoo.com.sg"></name-card>
+    <main>
+        <div id="namecards">
+        </div>
+    </main>
 </body>
 </html>
