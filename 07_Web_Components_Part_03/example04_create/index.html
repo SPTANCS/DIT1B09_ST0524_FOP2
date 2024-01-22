@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Card Example</title>
+    <script src="./funactivity.js" type="module"></script>
+    <script src="./main.js"></script>
+    <script>        
+        document.addEventListener("DOMContentLoaded", (event) => {
+            console.log("DOM fully loaded and parsed");
+            loadActivity();
+        });
+    </script>
+    <style>
+        #activities {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(400px, 1fr));
+            column-gap: 30px;
+            row-gap: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fun Activity Suggestion</h1>
+    <main >
+        <div id="activities">
+        </div>
+    </main>
+    <!-- <fun-activity activity='ABCDEFG' activitytype='Some Activity Type ABC' participant='4'></fun-activity> -->
+</body>
+</html>
